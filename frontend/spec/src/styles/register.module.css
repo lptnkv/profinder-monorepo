@@ -1,0 +1,16 @@
+.form {
+    width: 40%;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}

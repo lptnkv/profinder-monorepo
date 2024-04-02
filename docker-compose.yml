@@ -1,0 +1,23 @@
+version: "3"
+services:
+  backend:
+    build: ./backend
+    container_name: api_backend
+    command: npm run dev
+    ports:
+      - "3000:8000"
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
+    
+  frontend:
+    build: ./frontend
+    container_name: api_frontend
+    command: npm run dev
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
